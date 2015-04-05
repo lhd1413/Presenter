@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm("UploadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" accept="application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+    <input type="submit" name="Submit" id="Submit" value="업로드" />
+}
